@@ -36,14 +36,10 @@ class ListViewModel: NSObject {
     func data(results: [Articles?]){
         if results.count > 0 {
             for result in results {
-                if let head = result?.title, let overView = result?.content, let date = result?.author  {
-                    let details = ListItem(headLine: head, overView: overView, date: date)
-                    items.append(details)
-                }
-                if let name = result?.title, let overView = result?.description, let date = result?.author  {
-                    let details = DetailsItem(name: name, pictureUrl: result?.urlToImage ?? "", overView: overView, date: date)
-                    items.append(details)
-                }
+                
+                let details = ListItem(headLine: result?.title ?? "", overView: result?.description ?? "", date: result?.publishedAt ?? "", author: result?.author ?? "", url: result?.url ?? "", urlToImage: result?.urlToImage ?? "", publishedAt: result?.publishedAt ?? "")
+                items.append(details)
+
             }
         }else{
             //Handle no results
@@ -56,17 +52,17 @@ class ListViewModel: NSObject {
 
 
 //MARK: - UITableViewDataSource
-extension ListViewModel: UITableViewDataSource {
+extension ListViewModel: UITableViewDataSource,UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return  items.filter { $0.type == .list }.count > 0 ? items.filter { $0.type == .list }.count : items.filter { $0.type == .noResult }.count
+        return  1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return items.filter { $0.type == .list }.count > 0 ? items.filter { $0.type == .list }[section].rowCount : items.filter { $0.type == .noResult }[section].rowCount
+        return items.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let item = type == .list ? items.filter { $0.type == .list }[indexPath.section] : items.filter { $0.type == .details }[indexPath.section]
+        let item = items[indexPath.row]
         switch item.type {
         case .list:
             if let cell = tableView.dequeueReusableCell(withIdentifier: ListCell.identifier, for: indexPath) as? ListCell {
@@ -82,7 +78,7 @@ extension ListViewModel: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return items[section].type == .list ? "" : items[section].sectionTitle
+        return ""
     }
 }
 
@@ -132,12 +128,25 @@ struct ListItem: ListViewModelItem {
     var overView: String
     var date: String
     
-    init(headLine: String, overView: String, date: String) {
+    var author: String
+    var url: String
+    var urlToImage: String
+    var publishedAt: String
+
+    
+    init(headLine: String, overView: String, date: String , author : String , url : String, urlToImage : String, publishedAt : String) {
         self.headLine = headLine
         self.overView = overView
         self.date = date
+        
+         self.author = author
+         self.url = url
+         self.urlToImage = urlToImage
+         self.publishedAt = publishedAt
     }
 }
+
+
 
 
 struct NoResultsItem: ListViewModelItem {

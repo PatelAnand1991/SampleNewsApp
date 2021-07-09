@@ -12,7 +12,8 @@ class ViewController: UIViewController, LanguageVCDelegate {
     
     var refreshControl = UIRefreshControl()
     @IBOutlet weak var tableView: UITableView!
-   
+   @IBOutlet weak var loadingActivityIndicator: UIActivityIndicatorView!
+
     fileprivate let viewModel = ListViewModel()
 
     let manager = ListManager()
@@ -31,8 +32,8 @@ class ViewController: UIViewController, LanguageVCDelegate {
         
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image:  UIImage.init(named: "Setting.png"), style: .plain, target: self, action: #selector(self.SettingTapped))
-        self.navigationItem.title = kNewsFeed
-
+        self.navigationItem.title = "NEWS"
+        loadingActivityIndicator.startAnimating()
         setUpData()
     }
     
@@ -41,6 +42,7 @@ class ViewController: UIViewController, LanguageVCDelegate {
             self.viewModel.items.removeAll()
             self.viewModel.data(results: results?.articles ?? [])
             DispatchQueue.main.async {
+                self.loadingActivityIndicator.stopAnimating()
                 self.refreshControl.endRefreshing()
                 self.tableView.reloadData()
             }
@@ -74,7 +76,10 @@ class ViewController: UIViewController, LanguageVCDelegate {
 //MARK: - UITableViewDelegate
 extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: String(describing: DetailViewController.self)) as! DetailViewController
+        let details = viewModel.items[indexPath.row]
+        vc.ArticalDetails = (details as! ListItem)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

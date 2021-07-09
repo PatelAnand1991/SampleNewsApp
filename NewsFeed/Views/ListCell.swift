@@ -7,19 +7,42 @@
 //
 
 import UIKit
+import SDWebImage
 
 class ListCell: UITableViewCell {
 
-    @IBOutlet weak var headLines: UILabel?
-    @IBOutlet weak var readMore: UILabel?
+    
+    
+    @IBOutlet weak var lblTitle: UILabel! {
+        didSet {
+            lblTitle.textColor = UIColor.black
+        }
+    }
+    @IBOutlet weak var lblAuthor: UILabel! {
+        didSet {
+            lblAuthor.textColor = UIColor.lightGray
+        }
+    }
+
+    @IBOutlet weak var lblPublishedAt: UILabel! {
+        didSet {
+            lblPublishedAt.textColor = UIColor.darkGray
+
+        }
+    }
+    @IBOutlet weak var articleImageView: UIImageView!
+
     
     var item: ListViewModelItem? {
         didSet {
-            guard let item = item as? ListItem else {
+            guard let article = item as? ListItem else {
                 return
             }
-            headLines?.text = item.headLine
-            readMore?.text = item.overView
+            
+            lblTitle?.text = article.headLine
+            lblAuthor?.text = article.author
+            lblPublishedAt?.text = article.publishedAt.UTCToShortLocal()
+                self.articleImageView.sd_setImage(with: URL(string: article.urlToImage), placeholderImage: UIImage(named: "placeholder"))
         }
     }
     
@@ -37,7 +60,8 @@ class ListCell: UITableViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        headLines?.text = nil
-        readMore?.text = nil
+        lblTitle?.text = nil
+        lblAuthor?.text = nil
+        lblPublishedAt?.text = nil
     }
 }
