@@ -82,6 +82,10 @@
 				2C29944D269876E9000A7162 /* AppDelegate.swift */,
 				2C29944F269876E9000A7162 /* SceneDelegate.swift */,
 				2C299451269876E9000A7162 /* ViewController.swift */,
+				2C29946F26987799000A7162 /* ViewModel */,
+				2C299472269877D4000A7162 /* Manager */,
+				2C299473269877E3000A7162 /* Model */,
+				2C299474269877EC000A7162 /* Views */,
 				2C299453269876E9000A7162 /* Main.storyboard */,
 				2C299456269876ED000A7162 /* Assets.xcassets */,
 				2C299458269876ED000A7162 /* LaunchScreen.storyboard */,
@@ -97,6 +101,34 @@
 				2C299466269876EE000A7162 /* Info.plist */,
 			);
 			path = NewsFeedTests;
+			sourceTree = "<group>";
+		};
+		2C29946F26987799000A7162 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2C299472269877D4000A7162 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2C299473269877E3000A7162 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2C299474269877EC000A7162 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
