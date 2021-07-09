@@ -18,6 +18,13 @@
 		2C29947926987C9B000A7162 /* ChooseLanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C29947826987C9B000A7162 /* ChooseLanguageVC.swift */; };
 		2C29947B26988014000A7162 /* ChooseLanguageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C29947A26988014000A7162 /* ChooseLanguageCell.swift */; };
 		2CDFDE5926988A32005F762C /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE5826988A31005F762C /* Strings.swift */; };
+		2CDFDE5D26988DD7005F762C /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE5C26988DD6005F762C /* ListViewModel.swift */; };
+		2CDFDE5F26988DE7005F762C /* ListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE5E26988DE7005F762C /* ListManager.swift */; };
+		2CDFDE6326988DF7005F762C /* SError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE6026988DF7005F762C /* SError.swift */; };
+		2CDFDE6426988DF7005F762C /* Meta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE6126988DF7005F762C /* Meta.swift */; };
+		2CDFDE6526988DF7005F762C /* Articles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE6226988DF7005F762C /* Articles.swift */; };
+		2CDFDE6826988E04005F762C /* ListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFDE6626988E03005F762C /* ListCell.xib */; };
+		2CDFDE6926988E04005F762C /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE6726988E03005F762C /* ListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		2C29947A26988014000A7162 /* ChooseLanguageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseLanguageCell.swift; sourceTree = "<group>"; };
 		2CDFDE5826988A31005F762C /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		2CDFDE5B26988AA2005F762C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		2CDFDE5C26988DD6005F762C /* ListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		2CDFDE5E26988DE7005F762C /* ListManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListManager.swift; sourceTree = "<group>"; };
+		2CDFDE6026988DF7005F762C /* SError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SError.swift; sourceTree = "<group>"; };
+		2CDFDE6126988DF7005F762C /* Meta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meta.swift; sourceTree = "<group>"; };
+		2CDFDE6226988DF7005F762C /* Articles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Articles.swift; sourceTree = "<group>"; };
+		2CDFDE6626988E03005F762C /* ListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListCell.xib; sourceTree = "<group>"; };
+		2CDFDE6726988E03005F762C /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +131,7 @@
 		2C29946F26987799000A7162 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2CDFDE5C26988DD6005F762C /* ListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -124,6 +139,7 @@
 		2C299472269877D4000A7162 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				2CDFDE5E26988DE7005F762C /* ListManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -131,6 +147,9 @@
 		2C299473269877E3000A7162 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2CDFDE6226988DF7005F762C /* Articles.swift */,
+				2CDFDE6126988DF7005F762C /* Meta.swift */,
+				2CDFDE6026988DF7005F762C /* SError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				2C29947A26988014000A7162 /* ChooseLanguageCell.swift */,
+				2CDFDE6726988E03005F762C /* ListCell.swift */,
+				2CDFDE6626988E03005F762C /* ListCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C29945A269876ED000A7162 /* LaunchScreen.storyboard in Resources */,
+				2CDFDE6826988E04005F762C /* ListCell.xib in Resources */,
 				2C299457269876ED000A7162 /* Assets.xcassets in Resources */,
 				2C299455269876E9000A7162 /* Main.storyboard in Resources */,
 			);
@@ -257,8 +279,14 @@
 				2C299452269876E9000A7162 /* ViewController.swift in Sources */,
 				2C29944E269876E9000A7162 /* AppDelegate.swift in Sources */,
 				2C299450269876E9000A7162 /* SceneDelegate.swift in Sources */,
+				2CDFDE6526988DF7005F762C /* Articles.swift in Sources */,
+				2CDFDE6926988E04005F762C /* ListCell.swift in Sources */,
+				2CDFDE6426988DF7005F762C /* Meta.swift in Sources */,
 				2C29947926987C9B000A7162 /* ChooseLanguageVC.swift in Sources */,
 				2C29947726987922000A7162 /* Constants.swift in Sources */,
+				2CDFDE5D26988DD7005F762C /* ListViewModel.swift in Sources */,
+				2CDFDE5F26988DE7005F762C /* ListManager.swift in Sources */,
+				2CDFDE6326988DF7005F762C /* SError.swift in Sources */,
 				2CDFDE5926988A32005F762C /* Strings.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -18,7 +18,7 @@ let ApiKey = "a13d06a9e79448f19acb9df5a537e934"
 
 // MARK: - WEBSERVICE NAME -
 
-enum TAGNAME: String {
+enum ServiceList: String {
 case Topheadlines = "top-headlines"
 }
 
