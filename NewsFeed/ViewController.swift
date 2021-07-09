@@ -18,7 +18,7 @@ class ViewController: UIViewController, LanguageVCDelegate {
 
     let manager = ListManager()
 
-    var param = Query(country: UserDefaults.standard.object(forKey: UserDefaultsLanguageCode ) as? String ?? "us", page: "0", id: ApiKey, count: "30")
+    var param = Query(country: UserDefaults.standard.object(forKey: UserDefaultsLanguageCode ) as? String ?? "us", page: "", id: ApiKey, count: "30")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +66,8 @@ class ViewController: UIViewController, LanguageVCDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func didSelectData(_ ContryCode: String) {
+    func UpdateNewsInformation(_ ContryCode: String) {
+        loadingActivityIndicator.startAnimating()
         param = Query(country: UserDefaults.standard.object(forKey: UserDefaultsLanguageCode ) as? String ?? "us", page: "", id: ApiKey, count: "30")
         setUpData()
     }
