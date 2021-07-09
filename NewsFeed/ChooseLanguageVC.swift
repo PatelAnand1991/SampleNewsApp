@@ -9,7 +9,7 @@
 import UIKit
 
 protocol LanguageVCDelegate: class {
-    func didSelectData(_ ContryCode: String)
+    func UpdateNewsInformation(_ ContryCode: String)
 }
 
 
@@ -71,7 +71,7 @@ extension ChooseLanguageVC: UITableViewDelegate,UITableViewDataSource
             let defaults = UserDefaults.standard
              defaults.setValue(String(describing: languageArray[indexPath.row]["code"]      ?? ""), forKey: UserDefaultsLanguageCode)
             defaults.synchronize()
-            delegate?.didSelectData(String(describing: languageArray[indexPath.row]["code"]      ?? ""))
+            delegate?.UpdateNewsInformation(String(describing: languageArray[indexPath.row]["code"]      ?? ""))
             self.navigationController?.popViewController(animated: true);
             
         }

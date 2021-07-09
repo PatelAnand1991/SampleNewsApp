@@ -28,6 +28,12 @@ class NewsFeedTests: XCTestCase {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
+            let manager = ListManager()
+            let query =  Query(country: UserDefaults.standard.object(forKey: UserDefaultsLanguageCode ) as? String ?? "us", page: "", id: ApiKey, count: "30")
+            manager.request(query: query){  (results) in
+                XCTAssert("ok" == String(results?.status ?? "ok"))
+            }
+
         }
     }
 
