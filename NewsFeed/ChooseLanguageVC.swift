@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol LanguageVCDelegate: class {
+    func didSelectData(_ ContryCode: String)
+}
+
+
 class ChooseLanguageVC: UIViewController {
 
-    
+    weak var delegate: LanguageVCDelegate?
+
     var languageArray = [NSDictionary]()
     @IBOutlet var tblview: UITableView!
     @IBOutlet weak var ActionButton: UIButton!
@@ -63,8 +69,11 @@ extension ChooseLanguageVC: UITableViewDelegate,UITableViewDataSource
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             
             let defaults = UserDefaults.standard
-             defaults.setValue(UserDefaults.standard.object(forKey: UserDefaultsLanguageCode ) as? String, forKey: UserDefaultsLanguageCode)
+             defaults.setValue(String(describing: languageArray[indexPath.row]["code"]      ?? ""), forKey: UserDefaultsLanguageCode)
             defaults.synchronize()
+            delegate?.didSelectData(String(describing: languageArray[indexPath.row]["code"]      ?? ""))
+            self.navigationController?.popViewController(animated: true);
+            
         }
 }
 

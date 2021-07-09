@@ -8,3 +8,4 @@
 
 import Foundation
 let kChooseLanguage =       "Choose Language"
+let kNewsFeed =       "NewsFeed"
