@@ -27,6 +27,8 @@
 		2CDFDE6926988E04005F762C /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE6726988E03005F762C /* ListCell.swift */; };
 		2CDFDE6B2698D5CD005F762C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE6A2698D5CD005F762C /* DetailViewController.swift */; };
 		2CDFDE742698D81F005F762C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CDFDE732698D81F005F762C /* Extension.swift */; };
+		2CDFDE7826990FD2005F762C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFDE7726990FD2005F762C /* GoogleService-Info.plist */; };
+		2CDFDE7A269910BF005F762C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2CDFDE79269910BF005F762C /* GoogleService-Info.plist */; };
 		77E68775647C1447B188753D /* Pods_NewsFeedTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0949754614F4587DA8C5B5C5 /* Pods_NewsFeedTests.framework */; };
 		F9270BCD4F65B71192FCD912 /* Pods_NewsFeed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 847BDFF18A20C1D7A9A3F041 /* Pods_NewsFeed.framework */; };
 /* End PBXBuildFile section */
@@ -68,6 +70,8 @@
 		2CDFDE6726988E03005F762C /* ListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
 		2CDFDE6A2698D5CD005F762C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		2CDFDE732698D81F005F762C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2CDFDE7726990FD2005F762C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2CDFDE79269910BF005F762C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		655086A7323E6615DF8766D8 /* Pods-NewsFeed.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsFeed.debug.xcconfig"; path = "Target Support Files/Pods-NewsFeed/Pods-NewsFeed.debug.xcconfig"; sourceTree = "<group>"; };
 		847BDFF18A20C1D7A9A3F041 /* Pods_NewsFeed.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NewsFeed.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EDA9A64F08EA01614C433BB /* Pods-NewsFeedTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NewsFeedTests.release.xcconfig"; path = "Target Support Files/Pods-NewsFeedTests/Pods-NewsFeedTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 				2C299456269876ED000A7162 /* Assets.xcassets */,
 				2C299458269876ED000A7162 /* LaunchScreen.storyboard */,
 				2C29945B269876ED000A7162 /* Info.plist */,
+				2CDFDE79269910BF005F762C /* GoogleService-Info.plist */,
 			);
 			path = NewsFeed;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 			children = (
 				2C299464269876EE000A7162 /* NewsFeedTests.swift */,
 				2C299466269876EE000A7162 /* Info.plist */,
+				2CDFDE7726990FD2005F762C /* GoogleService-Info.plist */,
 			);
 			path = NewsFeedTests;
 			sourceTree = "<group>";
@@ -305,6 +311,7 @@
 			files = (
 				2C29945A269876ED000A7162 /* LaunchScreen.storyboard in Resources */,
 				2CDFDE6826988E04005F762C /* ListCell.xib in Resources */,
+				2CDFDE7A269910BF005F762C /* GoogleService-Info.plist in Resources */,
 				2C299457269876ED000A7162 /* Assets.xcassets in Resources */,
 				2C299455269876E9000A7162 /* Main.storyboard in Resources */,
 			);
@@ -314,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2CDFDE7826990FD2005F762C /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

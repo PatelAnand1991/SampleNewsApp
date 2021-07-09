@@ -7,7 +7,7 @@ target 'NewsFeed' do
 
   # Pods for NewsFeed
   pod 'SDWebImage', '~> 4.0'
-
+  pod 'Firebase/Analytics'
 
   target 'NewsFeedTests' do
     inherit! :search_paths
