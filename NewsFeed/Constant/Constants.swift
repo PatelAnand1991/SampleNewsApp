@@ -21,3 +21,7 @@ let ApiKey = "a13d06a9e79448f19acb9df5a537e934"
 enum TAGNAME: String {
 case Topheadlines = "top-headlines"
 }
+
+
+// MARK: User Defaults
+let UserDefaultsLanguageCode = "LanguageCode"

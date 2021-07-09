@@ -14,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        let defaults = UserDefaults.standard
+
+        if defaults.string(forKey: "isAppAlreadyLaunchedOnce") != nil{
+        }else{
+            defaults.set(true, forKey: "isAppAlreadyLaunchedOnce")
+            defaults.setValue("us", forKey: UserDefaultsLanguageCode)
+            defaults.synchronize()
+        }
         // Override point for customization after application launch.
         return true
     }
