@@ -138,18 +138,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="0vd-iA-Ow8">
-                                <rect key="frame" x="177.5" y="101" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="kMs-sg-tlO">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="HhA-BU-AFn"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Prc-B8-i8M">
-                                <rect key="frame" x="10" y="220" width="355" height="171"/>
+                                <rect key="frame" x="10" y="264" width="355" height="95.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYW-ev-Jak">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="25"/>
@@ -171,18 +167,14 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwb-mO-ACC">
-                                        <rect key="frame" x="0.0" y="57.5" width="355" height="75.5"/>
-                                        <string key="text">Detail
-fsdf
-sdfsdf
-sdf</string>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwb-mO-ACC">
+                                        <rect key="frame" x="0.0" y="57.5" width="355" height="0.0"/>
                                         <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="17"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tdk-DP-gam">
-                                        <rect key="frame" x="0.0" y="138" width="355" height="33"/>
+                                        <rect key="frame" x="0.0" y="62.5" width="355" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Read full story">
                                             <color key="titleColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.73333333329999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -196,16 +188,17 @@ sdf</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="kMs-sg-tlO" firstAttribute="top" secondItem="6FD-tE-GAV" secondAttribute="top" id="8tI-rH-5EH"/>
                             <constraint firstItem="ySu-I3-A6g" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Prc-B8-i8M" secondAttribute="bottom" id="9IC-6P-v2c"/>
                             <constraint firstItem="kMs-sg-tlO" firstAttribute="leading" secondItem="ySu-I3-A6g" secondAttribute="leading" id="C7d-CX-wb5"/>
                             <constraint firstItem="Prc-B8-i8M" firstAttribute="leading" secondItem="ySu-I3-A6g" secondAttribute="leading" constant="10" id="I7o-XZ-Xa2"/>
                             <constraint firstItem="kMs-sg-tlO" firstAttribute="trailing" secondItem="ySu-I3-A6g" secondAttribute="trailing" id="Kyv-Kg-roK"/>
                             <constraint firstItem="ySu-I3-A6g" firstAttribute="trailing" secondItem="Prc-B8-i8M" secondAttribute="trailing" constant="10" id="fEy-yQ-r61"/>
                             <constraint firstItem="Prc-B8-i8M" firstAttribute="top" secondItem="kMs-sg-tlO" secondAttribute="bottom" constant="20" id="sc5-9W-W61"/>
+                            <constraint firstItem="kMs-sg-tlO" firstAttribute="top" secondItem="ySu-I3-A6g" secondAttribute="top" id="xrH-d2-ZZs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ySu-I3-A6g"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="articleImageView" destination="kMs-sg-tlO" id="5X4-oP-9nY"/>
                         <outlet property="detailLabel" destination="zwb-mO-ACC" id="NUS-Sd-fcV"/>
