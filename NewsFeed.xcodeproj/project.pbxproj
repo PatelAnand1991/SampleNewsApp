@@ -99,6 +99,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C19AA1226995D55007EE9D7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2C299451269876E9000A7162 /* ViewController.swift */,
+				2C29947826987C9B000A7162 /* ChooseLanguageVC.swift */,
+				2CDFDE6A2698D5CD005F762C /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2C19AA1426995D65007EE9D7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				2C29944D269876E9000A7162 /* AppDelegate.swift */,
+				2C29944F269876E9000A7162 /* SceneDelegate.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		2C299441269876E9000A7162 = {
 			isa = PBXGroup;
 			children = (
@@ -122,11 +141,8 @@
 		2C29944C269876E9000A7162 /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
-				2C29944D269876E9000A7162 /* AppDelegate.swift */,
-				2C29944F269876E9000A7162 /* SceneDelegate.swift */,
-				2C299451269876E9000A7162 /* ViewController.swift */,
-				2C29947826987C9B000A7162 /* ChooseLanguageVC.swift */,
-				2CDFDE6A2698D5CD005F762C /* DetailViewController.swift */,
+				2C19AA1426995D65007EE9D7 /* Base */,
+				2C19AA1226995D55007EE9D7 /* Controllers */,
 				2C2994752698789B000A7162 /* Constant */,
 				2C29946F26987799000A7162 /* ViewModel */,
 				2C299472269877D4000A7162 /* Manager */,
